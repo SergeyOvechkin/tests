@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+ <html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../bootstrap.min.css">
+
+		<style type="text/css">
+
+
+        </style>
+    </head>
+<body>
+<div class="container">
+	<div class="row">
+		
+<!--------------------------------->  
+             <form data-form="container" class="card col-12" style="margin-bottom: 10px; margin-top: 10px; padding-bottom: 10px;">
+					<div class="form-group">
+						<label for="">Введите имя</label>
+						<textarea data-form-input="inputvalue" class="form-control" id="" rows="1"></textarea>
+					</div>
+					<button data-form-click="click" type="submit" class="btn btn-primary">Submit</button>
+			</form>
+
+		
+			<div data-greeting="container" class="col-6 card" style="color: red; margin-top: 10px;">
+			
+				<p>Привет: <span  data-greeting-user_name="text">guest</span></p>
+
+			</div>
+		
+		
+		   <div data-logout="container" class="col-6 card" style="color: red; margin-top: 10px;">
+		
+				<a href="#"> Выйти из профиля: ( <span  data-logout-user_name="text"></span>  )</a>
+				
+			</div>
+			
+		
+			<div class="container-fluid" style="border: 1px solid red; margin-top: 20px; padding-bottom: 10px;">
+					<p> все пользователи:</p>
+		 
+					<div data-users_array="array" class="row">
+		
+						<div data-user="container" class="col-4 card" style="color: red; margin-top: 10px;">		
+							<p>пользователь - <span data-user-user_name="text">user_name_1</span> </p>						
+						</div>
+			
+						<div data-user="container" class="col-4 card" style="color: red; margin-top: 10px;">		
+							<p>пользователь - <span data-user-user_name="text">user_name_2</span> </p>						
+						</div>
+						
+					</div>	
+			</div>		
+
+   
+ <!--------------------------------->  
+		
+	</div>
+</div>
+
+	<script src="../htmlix/htmlix-state.js"></script>
+	<script src="../htmlix/htmlix-array.js"></script>
+	<script src="../htmlix/htmlix-container.js"></script>
+	<script src="../htmlix/htmlix-emiter-and-router.js"></script>
+	<script src="../htmlix/htmlix-prop-common.js"></script>
+	<script src="../htmlix/htmlix-PropStandartEvent-and-PropEventEmiter.js"></script>
+	<script src="../htmlix/htmlix-PropGroup.js"></script>
+	<script src="../htmlix/htmlix-PropVariant.js"></script>
+	<script src="./test.js"></script>
+</body>
+</html>

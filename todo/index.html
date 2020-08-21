@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+ <html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../bootstrap.min.css">
+
+		<style type="text/css">
+		 .record-container {
+		
+			max-width: 1000px;
+			min-width: 530px;
+			margin-top: 10px;
+			border-right: 1px solid gray;
+			border-left: 1px solid gray;
+			background-color: transparent;
+		 }
+		 .record-menu {
+			border-top: 1px solid gray; 
+			border-bottom: 1px solid gray; 
+			padding: 0px 5px 0px 0px;
+		 }
+		 .record-menu-item {
+		
+			border-right: 1px solid gray;
+
+		 }
+		 .record-menu-item:hover {
+			background-color: #dc3545;
+			color: white;
+		  }
+		 .record {
+				border: none;
+				padding: 5px 5px 5px 5px;
+				border-bottom: 1px solid gray;
+				
+				background-color: transparent;
+				border-radius: 0 0 0 0 !important;
+		 }
+		 .record-check {
+				margin-top: .5rem !important;
+		 }
+		 .record-check-label {
+				margin-top: .1rem !important;
+		 }
+		 .record-btn-toolbar {
+			border-top: 1px solid gray; 
+		 }
+		 input.record-check:checked+label  {
+			text-decoration: line-through;
+		 }
+		 .active{
+			background-color: #dc3545 !important;
+			color: white !important;
+		 }
+		 [data-task_records="array"] {
+		 
+			height: 350px;
+			overflow-y: auto;
+		 
+		 }
+		 [data-task_form="container"] {
+			background-color: #fff1c8;
+				
+		 }
+
+        </style>
+    </head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+		
+   <div class="record-container d-flex flex-column justify-content-between" style="">
+	  
+	 <div class="d-flex flex-column" >
+		 <!---------------------------------------------------------------------------------------->
+		  <div data-record_menu="array" class="record-menu d-flex justify-content-between" >
+			<nav class="nav">
+				<nav class="nav record-menu-all-items">
+					<a data-menu_item="template" data-menu_item-title="text" data-menu_item-class="class" data-menu_item-click="click" style="display: none !important;" class="record-menu-item nav-link" href="#">
+						Active
+					</a>
+				</nav>
+				
+				<a data-record_menu-input_style="style" class="record-menu-item nav-link d-flex justify-content-between" href="#" style="display: none !important;">
+					<input data-record_menu-input="inputvalue" class="form-control mr-sm-2  form-control-sm" type="text" placeholder="добавить" >
+					<button data-record_menu-input_click="click" class="btn-sm btn btn-outline-success  my-sm-0" type="submit">save</button>
+				</a>
+				
+			</nav>
+			<form class="d-flex my-2 " style="width: 151px; height: 32px;">
+				<button data-record_menu-add_click="click" class="btn-sm btn btn-outline-success mr-2  my-sm-0" type="submit">+</button>
+				<button data-record_menu-edit_click="click" class="btn-sm btn btn-outline-warning mr-2  my-sm-0" type="submit">edit</button>
+				<button data-record_menu-rm_click="click" class="btn-sm btn btn-outline-danger   my-sm-0" type="submit" style="white-space: nowrap;">rm task</button>
+			</form>				
+		 </div>
+		<!------------------------------------------------------------> 		
+		 <form data-task_form="container" data-task_form-display="style" class="d-flex justify-content-between record" style="display: none !important;" >
+				<input data-task_form-input="inputvalue" style="width: 30%;" class="form-control mr-sm-2  form-control-sm" type="text" placeholder="добавить" >
+	           <div>
+				<button data-task_form-remove="click" class="btn-sm btn btn-outline-danger  my-sm-0" type="submit">rm</button>
+				<button data-task_form-save="click" class="btn-sm btn btn-outline-success  my-sm-0" type="submit">save</button>
+			   </div>
+		</form>
+		<!--------------------------------------------------------------->
+		<ul data-task_records="array" class="list-group">
+		
+			<li data-record="template" class="record list-group-item d-flex justify-content-between" style="display: none !important;" >
+				<div class="form-check">
+					<input data-record-check_click="click" data-record-check="checkbox" class="record-check form-check-input" type="checkbox" value="" id="defaultCheck1">
+					<label data-record-title="text" data-record-class="class" class="record-check-label form-check-label" for="defaultCheck1">
+						Default checkbox
+					</label>
+				</div>
+				<button data-record-remove="click" class="btn-sm btn btn-outline-danger  my-sm-0" type="submit">rm</button>
+			</li>
+
+			
+		</ul>
+	</div>
+		<!------------------------------------------------------------------------------------------------------------>
+		<div data-toolbar="container" class="record record-btn-toolbar btn-toolbar d-flex justify-content-between " role="toolbar" aria-label="Toolbar with button groups">
+		
+				<button  data-toolbar-btn_add="click" type="button" class="btn-sm btn btn-outline-success  my-sm-0">+</button>
+			
+				<button data-toolbar-btn_show_all="click" data-toolbar-btn_all_class="class"  type="button" class=" active btn-sm btn  btn-info  my-sm-0">Показать все</button>
+				
+				<button data-toolbar-btn_show_completed="click" data-toolbar-btn_completed_class="class"  type="button" class="btn-sm btn  btn-info  my-sm-0">Показать выполненые</button>
+				
+				<button data-toolbar-btn_show_unfulfilled="click" data-toolbar-btn_unfulfilled_class="class" type="button" class="btn-sm btn  btn-info  my-sm-0">Показать невыполненые</button>
+			
+		</div> 		  
+   </div>	
+   
+   
+</div>	
+		  
+	
+
+
+	</div>
+</div>
+
+	<script src="../htmlix/htmlix-state.js"></script>
+	<script src="../htmlix/htmlix-array.js"></script>
+	<script src="../htmlix/htmlix-container.js"></script>
+	<script src="../htmlix/htmlix-emiter-and-router.js"></script>
+	<script src="../htmlix/htmlix-prop-common.js"></script>
+	<script src="../htmlix/htmlix-PropStandartEvent-and-PropEventEmiter.js"></script>
+	<script src="../htmlix/htmlix-PropGroup.js"></script>
+	<script src="../htmlix/htmlix-PropVariant.js"></script>
+	<script src="./record.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+ <html lang="ru">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../bootstrap.min.css">
+
+		<style type="text/css">
+
+
+        </style>
+    </head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		
+<!--------------------------------->  
+
+<div data-test_array="array" class="col-12">
+		
+		
+<div class="form-group ">
+    <label for="exampleFormControlSelect1">Фильтр по категории</label>
+    <select  data-test_array-select_group="group" data-test_array-select_group_click="click" data-test_array-category="select" class="form-control" id="exampleFormControlSelect1">
+	
+		<option  data-select_container="container"  value="все">все</option>
+		<option  data-select_container="container"  value="категория 1">категория 1</option>
+		<option  data-select_container="container"  value="категория 2">категория 2</option>
+		<option  data-select_container="container"  value="категория 3">категория 3</option>
+   
+   </select>
+</div>
+
+<div class="container-fluid">
+		<div class="array row">
+		
+			<div data-test_container="container" class="card col-3">
+				<p data-test_container-main_text="text">контейнер 1</p>
+				<p>категория: <span data-test_container-category_title="text">категория 1</span></p>
+			</div>
+			<div data-test_container="container" class="card col-3">
+				<p data-test_container-main_text="text">контейнер 2</p>
+				<p>категория: <span data-test_container-category_title="text">категория 1</span></p>
+			</div>			
+			<div data-test_container="container" class="card col-3">
+				<p data-test_container-main_text="text">контейнер 3</p>
+				<p>категория: <span data-test_container-category_title="text">категория 2</span></p>
+			</div>				
+			<div data-test_container="container" class="card col-3">
+				<p data-test_container-main_text="text">контейнер 4</p>
+				<p>категория: <span data-test_container-category_title="text">категория 3</span></p>
+			</div>	
+			<div data-test_container="container" class="card col-3">
+				<p data-test_container-main_text="text">контейнер 5</p>
+				<p>категория: <span data-test_container-category_title="text">категория 3</span></p>
+			</div>
+			<div data-test_container="container" class="card col-3">
+				<p data-test_container-main_text="text">контейнер 6</p>
+				<p>категория: <span data-test_container-category_title="text">категория 3</span></p>
+			</div>	
+			
+		</div>
+		
+		
+</div>		
+
+<button data-test_array-pagin="click" type="button" class="btn btn-primary" style="margin-top: 20px;">новая страница</button>
+ 
+ <!--------------------------------->  
+</div><!-- end array -->
+
+		
+	
+</div>
+</div>
+
+	<script src="../htmlix/htmlix-state.js"></script>
+	<script src="../htmlix/htmlix-array.js"></script>
+	<script src="../htmlix/htmlix-container.js"></script>
+	<script src="../htmlix/htmlix-emiter-and-router.js"></script>
+	<script src="../htmlix/htmlix-prop-common.js"></script>
+	<script src="../htmlix/htmlix-PropStandartEvent-and-PropEventEmiter.js"></script>
+	<script src="../htmlix/htmlix-PropGroup.js"></script>
+	<script src="../htmlix/htmlix-PropVariant.js"></script>
+	<script src="./test.js"></script>
+</body>
+</html>
